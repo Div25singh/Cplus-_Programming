@@ -1,0 +1,120 @@
+										File handling
+
+HEADERS :--
+
+ifstream in; // input
+ofstream out; // output
+fstream io; // input and output
+
+void ifstream::open(const char *filename, ios::openmode mode = ios::in);
+void ofstream::open(const char *filename, ios::openmode mode = ios::out| ios::trunc);
+void fstream::open(const char *filename, ios::openmode mode = ios::in| ios::out);
+
+
+FILE MODES :--
+
+ios::app // apppend data in the end of the file
+ios::ate // apppend data anywhere in file
+ios::binary // open file in binary mode
+ios::in // open file in input mode
+ios::out // open file in output mode
+ios::trunc // delete the data of the file
+ios::beg // beginning of file
+ios::end // end of file
+ios::cur // current location
+
+
+SYNTAX :--
+
+ofstream out;
+out.open("test.txt"|ios::out); // using membership function method
+
+
+ifstream mystream("myfile.txt"); // using constructor method
+
+if(!mystream)
+{
+ 	cout<<"cannot open file.\n");
+//handle error
+}
+mystream.close();
+
+
+
+EXAMPLE :--
+
+		USING CONSTRUCTOR METHOD
+
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main()
+{
+ofstream out("X"); // output mode 
+if(!out)
+{
+	cout<<"cannot open file.\n");
+return 1;
+}
+
+out<<"radios"<<39.95<<endl;
+out<<"tosters"<<19.95<<endl;
+out<<"mixers"<<24.80<<endl;
+out.close();
+return 0;
+}
+
+
+		USING MEMEBERSHIP FUNCTION METHOD
+
+#include<iostream>
+#include<fstream>
+using namespace std;
+
+int main()
+{
+char data[100];
+
+	// open a file in write mode
+ofstream outfile
+outfile.open("afile.dat");
+cout<<"writing to the file"<<endl;
+cout<<"enter your name";
+cin.getline(data,100); // member function.100 is the largest value we can give
+
+	//write inputted data into the file
+outfile<<data<<endl;
+cout<<"enter your age:";
+cin>>data;
+cin.ignore();
+
+	//again write inputted data into the file
+outfile<<data<<endl;
+
+	//close the opened file
+outfile.close();
+
+	//open file in read mode
+ifstream infile;
+infile.open("afile.dat");
+
+cout<<"reading from the file"<<endl;
+infile>>data;
+
+	//write the data at the screen
+cout<<data<<endl;
+
+	//again read the data from the file and display it
+infile>>data;
+cout<<data<endl;
+
+	//close the opened file
+infile.close;
+return 0;
+
+}
+
+
+
+
+
