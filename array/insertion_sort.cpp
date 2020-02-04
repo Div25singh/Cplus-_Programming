@@ -26,13 +26,13 @@ for(int i=0; i<n-1 ; i++)
 	
 	for(int j=i+1 ;j<n;j++)
 	{
-		if(temp>arr[j])
+		if(temp>arr[j])			//finding smallest in the array
 		{
 			temp=arr[j];
 			pos=j;
 		}
 	}
-	temp=arr[i];
+	temp=arr[i];		// replacing smallest with the first in array
 	arr[i]=arr[pos];
 	arr[pos]=temp;
 	
