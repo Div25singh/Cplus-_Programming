@@ -34,19 +34,19 @@ int main()
 			cout<<"overflow";
 			exit(1);
 		}
-		index= findpos(arr,n,item);
+		index= findpos(arr,n,item); //n=no of elements , arr = array , item= inserted item
 
-		for(i=n+1 ; i>index ;i--)
+		for(i=n+1 ; i>index ;i--) // n+1 because of insertion
 		{
-			arr[i]=arr[i-1];
+			arr[i]=arr[i-1];  // shift elements to create room for new elements
 		}
-			arr[index]=item;
-			n=n+1;
-			cout<<"want to insert more press y";
+			arr[index]=item;  // item inserted
+			n=n+1;  //number of updated elements
+			cout<<"want to insert more press (y/n)";
 			cin>>ch;	
 		}
 	
-	cout<<"the new array is";
+	cout<<"the new array is \n";
 
 	for(i=0; i<n;i++)
 	{
@@ -54,9 +54,10 @@ int main()
 		cout<<endl;
 			
 	}
+	
 	return 0;
 }
-	int findpos(int arr[], int size, int item)
+	int findpos(int arr[], int size, int item) //function to determine the position for new element
 	{ int pos,i;
 		if(item<arr[0])
 		{
