@@ -1,6 +1,6 @@
 #include<iostream>
 #include<conio.h>
-int small(int [], int); 
+
 //selection sort
 using namespace std;
 int main()
