@@ -29,7 +29,7 @@ int main()
 		}
 	}
 	cout<<"\n";
-	cout<<"the transpose of the matrix is \n";
+	cout<<"the transpose of the matrix is \n";  // transpose is done row-wise
 	for(int i=0; i<n ; i++)
 	{	cout<<"\n";
 		for(int j=0; j<m ; j++)
