@@ -44,7 +44,7 @@ int main()
 	size=m+n;
 	
 	cout<<"THE MERGED ARRAY IS: ";
-	for(int j=n, i=0 ; j<size & i<m ;i++,j++)
+	for(int j=n, i=0 ; j<size & i<m ;i++,j++) // making two loops work at a time
 	{
 		merge[j]=arr2[i];
 	}
