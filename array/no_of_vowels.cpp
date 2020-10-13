@@ -12,7 +12,7 @@ int main()
 	int count=0;
 		for(int i=0; i<x;i++)
 		{
-			switch(line[i])
+			switch(line[i]) //checking for all vowels ( upper or lower case )
 			{
 				case 'a':
 				case 'A':
