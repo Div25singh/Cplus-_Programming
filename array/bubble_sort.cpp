@@ -27,7 +27,7 @@ for(int i=1; i<n;i++)  // there will be n iterations
 		{
 			temp=arr[j];
 			arr[j]=arr[j+1];
-			arr[j+1]=temp;
+			arr[j+1]=temp;   // a -> b  // b -> c // c -> a
 		}
 	}
 }
